@@ -1,26 +1,27 @@
-import Page from '../components/Page.tsx'
+import Page from "../components/Page.tsx"
+import { Column, Table } from '../islands/Table.tsx'
+
+const columns: Column[] = [{
+	property: 'name',
+	title: 'Name',
+}, {
+	property: 'count',
+	title: 'Records',
+}]
+
+const data = [{
+	count: 12,
+	name: 'users',
+}]
 
 export default () => {
+	const onRowClick = (item: object) => {
+		console.log('Index:onRowClick', item)
+	}
+	
 	return (
-		<Page title='Data'>
-			<table>
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Records</th>
-						<th>Actions</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>users</td>
-						<td>0</td>
-						<td>
-							<a href='/users'>Link</a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<Page>
+			<Table columns={columns} data={data} onRowClick={onRowClick} />
 		</Page>
 	)
 }

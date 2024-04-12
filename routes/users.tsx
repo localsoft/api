@@ -1,5 +1,6 @@
 import { Column, Table } from "../islands/Table.tsx"
 import Page from "../components/Page.tsx"
+import { Users } from '../data/User.ts'
 
 const columns: Column[] = [{ 
 	property: 'uid',
@@ -9,13 +10,15 @@ const columns: Column[] = [{
 	title: 'E-Mail',
 }, {
 	title: 'Created',
-	render: item => <time>{item}</time>
+	render: (dataItem) => <time>{dataItem.created}</time>
 }]
 
-export default () => {
+export default async () => {
+	const data = await Users.all()
+	console.log('/users', data)
 	return (
-		<Page title="Users">
-			<Table columns={columns} url='/api/users' />
+		<Page title="users">
+			<Table columns={columns} data={[]} />
 		</Page>
 	)
 }

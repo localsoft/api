@@ -4,8 +4,8 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_index from "./routes/api/index.ts";
-import * as $api_users from "./routes/api/users.ts";
+import * as $api_rest_index from "./routes/api/rest/index.ts";
+import * as $api_rest_users from "./routes/api/rest/users.ts";
 import * as $index from "./routes/index.tsx";
 import * as $users from "./routes/users.tsx";
 import * as $Table from "./islands/Table.tsx";
@@ -15,8 +15,8 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/index.ts": $api_index,
-    "./routes/api/users.ts": $api_users,
+    "./routes/api/rest/index.ts": $api_rest_index,
+    "./routes/api/rest/users.ts": $api_rest_users,
     "./routes/index.tsx": $index,
     "./routes/users.tsx": $users,
   },

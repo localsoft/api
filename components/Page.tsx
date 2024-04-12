@@ -2,20 +2,19 @@ import { ComponentChildren } from 'preact'
 
 export interface Props {
 	children: ComponentChildren
-	title: string
 }
 
-export default ({ children, title }: Props) => {
+export default ({ children }: Props) => {
+	
+
 	return (
 		<>
 			<header>
 				<nav>
 					<ul>
+						<li>@localsoft</li>
 						<li>
 							<a href='/'>api</a>
-						</li>
-						<li>
-							<a href='/users'>users</a>
 						</li>
 					</ul>
 				</nav>
@@ -24,7 +23,11 @@ export default ({ children, title }: Props) => {
 				{children}
 			</main>
 			<footer>
-
+				<ul>
+					<li>
+						<a href='https://api.localsoft.org'>api</a>
+					</li>
+				</ul>
 			</footer>
 		</>
 	)

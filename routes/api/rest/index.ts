@@ -3,7 +3,7 @@ import { FreshContext } from "$fresh/server.ts"
 export const handler = (_req: Request, _ctx: FreshContext): Response => {
 	const data = [{
 		records: 0,
-		uid: 'users', 
+		name: 'users',
 	}]
 
 	const body = JSON.stringify(data, null, 2)
