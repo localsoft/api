@@ -5,30 +5,14 @@ export interface Props {
 }
 
 export default ({ children }: Props) => {
-	
-
 	return (
 		<>
-			<header>
-				<nav>
-					<ul>
-						<li>@localsoft</li>
-						<li>
-							<a href='/'>api</a>
-						</li>
-					</ul>
-				</nav>
+			<header style={{ backgroundColor: 'lightgray', display: 'flex', gap: '1rem', padding: '1rem' }}>
+				<span>@localsoft</span>
 			</header>
 			<main>
 				{children}
 			</main>
-			<footer>
-				<ul>
-					<li>
-						<a href='https://api.localsoft.org'>api</a>
-					</li>
-				</ul>
-			</footer>
 		</>
 	)
 }

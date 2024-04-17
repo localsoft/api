@@ -4,11 +4,12 @@
 	padding: 0;
 	text-align: left;
 }
-
+/* 
 html,
 body {
 	font-size: 15px;
 	min-height: 100vh;
+	overscroll-behavior: none;
 }
 
 main {
@@ -56,11 +57,14 @@ footer {
 }
 
 footer ul {
+	display: flex;
 	list-style: none;
+	justify-content: center;
+	gap: 1rem;
 }
 
 a {
 	color: inherit;
 	font-weight: bold;
 	text-decoration: none
-}
+} */
